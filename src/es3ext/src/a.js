@@ -8,6 +8,7 @@ Duktape.modSearch = function (id) {
 }
 /* -------------------------------------------------------------------------- */
 var ES3Class=require('es3class.js')
+var ES3Ext=require('es3ext.js')
 /* -------------------------------------------------------------------------- */
 var Rectangle=ES3Class({
 	constructor:function (width, height) {
@@ -19,6 +20,16 @@ var Rectangle=ES3Class({
 	}
 });
 /* -------------------------------------------------------------------------- */
+var Square=ES3Ext(
+	Rectangle,{
+		constructor:function(size){
+		Rectangle.call(this,size,size);
+	}
+});
+/* -------------------------------------------------------------------------- */
+var s=new Square(3);
+s.area();
+console.log(s.area());
 var r=new Rectangle(2,3);
 console.log(r.area());
 

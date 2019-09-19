@@ -1,1 +1,1 @@
-Inheritance abstraction through a function taking an object literal
+Class abstraction through a function taking an object literal
